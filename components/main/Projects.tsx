@@ -22,14 +22,14 @@ const Projects = () => {
             title="Cat Recognition (DeepLearning)"
             description="The Cat Recognition Project utilizes deep learning techniques to build a neural network capable of recognizing cats in images. Through data preparation, 
             model building, and evaluation, this project demonstrates the application of neural networks in image classification tasks."
-            link="https://github.com/HoomKh" 
+            link="https://github.com/HoomKh/Cat_Recognition_with_DeepLearning" 
             />
           <ProjectCard
             src="/object_detection_with_YOLO.jpg"
             title="DetectMaster YOLO"
             description="Welcome to DetectMaster YOLO, a comprehensive project for object detection using the YOLO (You Only Look Once) algorithm. 
             This repository contains various scripts to detect objects in real-time using a webcam, count cars and people, and detect personal protective equipment (PPE)."
-            link="https://github.com/HoomKh"
+            link="https://github.com/HoomKh/DetectMaster_YOLO"
           />
           <ProjectCard
             src="/face_detection_model.jpg"
@@ -37,7 +37,7 @@ const Projects = () => {
             description="The Face Detection Model, develops a robust face detection model using advanced machine learning techniques.
             It involves setting up the environment with TensorFlow, OpenCV, and matplotlib, collecting and augmenting images for a comprehensive dataset,
             and building and training the model with TensorFlow. The model is fine-tuned for accuracy and evaluated for real-world performance."
-            link="https://github.com/HoomKh"
+            link="https://github.com/HoomKh/Face_Detection_Model"
           />
         </div>
       </div>
