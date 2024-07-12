@@ -16,7 +16,7 @@ const Projects = () => {
           My Projects
         </h2>
 
-        <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+        <div className="h-full w-full flex justify-center flex-col md:flex-row gap-10 px-10">
           <ProjectCard
             src="/cat_detection_deeplearning.jpg"
             title="Cat Recognition (DeepLearning)"

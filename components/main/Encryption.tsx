@@ -59,7 +59,7 @@ const Encryption = () => {
                 type="text"
                 value={query}
                 onChange={handleInputChange}
-                className="w-[90%] sm:w-[500px] p-2 text-gray-800 bg-gray-1000 text-left text-purple border border-gray-300 rounded-2xl shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 opacity-[0.9] transition duration-200"
+                className="w-[90%] sm:w-[500px] bg-[#03001417] backdrop-blur-md px-4 p-2 text-gray-800 bg-gray-1000 text-left text-white border border-purple-800 rounded-[10px] shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 opacity-[0.9] transition duration-200"
                 placeholder="Ask anything about me"
               />
               <motion.button type="submit" className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] px-4">send</motion.button>
