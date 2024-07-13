@@ -18,7 +18,7 @@ const Encryption = () => {
     e.preventDefault();
     if (query.trim()) {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/AI/index/${query}`, {
+        const response = await fetch(`http://108.165.128.157:8000/AI/index/${query}`, {
           method: 'GET',
         });
         const data = await response.json();
@@ -113,3 +113,5 @@ const Encryption = () => {
 };
 
 export default Encryption;
+
+
