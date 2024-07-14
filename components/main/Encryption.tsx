@@ -1,34 +1,42 @@
 "use client"
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { slideInFromLeft, slideInFromTop } from '@/utils/motion';
-import Typewriter from 'typewriter-effect';
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { slideInFromLeft, slideInFromTop } from '@/utils/motion'
+import Typewriter from 'typewriter-effect'
 /* eslint-disable react/no-unescaped-entities */
 
 
-const Encryption = () => {
-  const [query, setQuery] = useState('');
-  const [response, setResponse] = useState('');
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
-  };
+const Encryption = () =>
+{
+  const [query, setQuery] = useState('')
+  const [response, setResponse] = useState('')
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+  {
+    setQuery(e.target.value)
+  }
+  const [responseKey, setResponseKey] = useState(0)
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (query.trim()) {
-      try {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+  {
+    e.preventDefault()
+    if (query.trim())
+    {
+      try
+      {
         const response = await fetch(`https://hooman-ai-api.info/AI/index/${query}`, {
           method: 'GET',
-        });
-        const data = await response.json();
-        console.log(data); // Handle the response data as needed
+        })
+        const data = await response.json()
+        console.log(data) // Handle the response data as needed
+        setResponseKey(prev => prev + 1)
         setResponse(data.response)
-      } catch (error) {
-        console.error('Error fetching data:', error);
+      } catch (error)
+      {
+        console.error('Error fetching data:', error)
       }
     }
-  };
+  }
 
   return (
     <div
@@ -76,11 +84,13 @@ const Encryption = () => {
                 options={{
                   delay: 30,
                 }}
-                onInit={(typewriter) => {
+                onInit={(typewriter) =>
+                {
                   typewriter
                     .typeString(response)
-                    .start();
+                    .start()
                 }}
+                key={responseKey}
               />
             </motion.div>
           )}
@@ -109,8 +119,8 @@ const Encryption = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Encryption;
 
