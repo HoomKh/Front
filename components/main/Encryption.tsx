@@ -18,7 +18,7 @@ const Encryption = () => {
     e.preventDefault();
     if (query.trim()) {
       try {
-        const response = await fetch(`http://108.165.128.157:8000/AI/index/${query}`, {
+        const response = await fetch(`https://hooman-ai-api.info/AI/index/${query}`, {
           method: 'GET',
         });
         const data = await response.json();
